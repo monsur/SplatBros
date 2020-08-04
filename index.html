@@ -24,17 +24,20 @@
       
     </div>
     
-    <img src="bolasfront.jpg" id="card" onclick="clickcard();">
+    <img src="bolasfront.jpg" id="card">
     
     <script>
-      var clickcard = function() {
+      document.getElementById('card').onclick = function() {
         // Grab a handle to the card image.
         var card = document.getElementById('card');
+        console.log('grabbed a handle to the image')
         
         if (card.src == 'bolasfront.jpg') {
+          console.log('flip front to back');
           card.src = 'bolasback.jpg';
         } else {
           card.src = 'bolasfront.jpg';
+          console.log('flip back to front');
         }
         
         return false;
