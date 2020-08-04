@@ -24,9 +24,21 @@
       
     </div>
     
+    <img src="bolasfront.jpg" id="card" onclick="clickcard();">
+    
     <script>
-      // All Javascript goes here!
-      alert('hello world!');
+      var clickcard = function() {
+        // Grab a handle to the card image.
+        var card = document.getElementById('card');
+        
+        if (card.src == 'bolasfront.jpg') {
+          card.src = 'bolasback.jpg';
+        } else {
+          card.src = 'bolasfront.jpg';
+        }
+        
+        return false;
+      };
     </script>
     
   </body>
